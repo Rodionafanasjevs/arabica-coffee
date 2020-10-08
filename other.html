@@ -1,0 +1,40 @@
+
+<head>
+    <link rel = "stylesheet" type = "text/css" href = "./st.css"/>
+  <title>Зерна арабики</title>
+  <br>
+  <h1 style = "text-align: center;">Статистика потребления кофе в мире</h1>
+  <p style = "text-align: right;"><em>13.09.2020</em></p>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  </head>
+  
+  
+  <div class="topnav">
+    <a class="mysite.html" href="mysite.html">Главная</a>
+    <a href="other.html">Статистика</a>
+  
+  </div> 
+  
+  <canvas id="bar-chart" width="15" height="5"></canvas>
+  <script>// Bar chart
+  new Chart(document.getElementById("bar-chart"), {
+      type: 'bar',
+      data: {
+        labels: ["Франция", "Италия", "Финляндия", "США", "Россия"],
+        datasets: [
+          {
+            label: "кг на душу населения",
+            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+            data: [5.4,5.9,12.0,4.2,1.6]
+          }
+        ]
+      },
+      options: {
+        legend: { display: false },
+        title: {
+          display: true,
+          text: 'Потребление, кг на душу населения '
+        }
+      }
+  });</script>
+
